@@ -8,12 +8,13 @@
     "@testing-library/user-event": "^12.1.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "^4.0.3",
+    "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "cypress open",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -30,5 +31,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cypress": "^6.5.0",
+    "eslint-plugin-cypress": "^2.11.2"
   }
 }
