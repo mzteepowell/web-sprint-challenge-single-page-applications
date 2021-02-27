@@ -7,7 +7,7 @@ describe('Pizza Applcation', () => {
   const dropdown = () => cy.get('select[name=dropdown]') 
   const radio = () => cy.get('input[name=sauces]') 
   const text_area = () => cy.get('input[name=text_area]') 
-  const checkbox = () => cy.get('form input')
+  const checkbox = () => cy.get('input[type=checkbox')
   const submitButton = () => cy.get('button')
 
   it('form check', () => {

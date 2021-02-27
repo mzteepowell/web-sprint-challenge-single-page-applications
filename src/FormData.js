@@ -216,6 +216,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='tomatoes'
+            value='tomatoes'
             onChange={onChange}
             checked={formValues.toppings}
             />
@@ -224,6 +225,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='spinach'
+            value='spinach'
             onChange={onChange}
             checked={formValues.toppings}
             />
@@ -232,6 +234,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='bacon'
+            value='bacon'
             onChange={onChange}
             checked={formValues.toppings}
             />
@@ -240,6 +243,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='mushrooms'
+            value='mushrooms'
             onChange={onChange}
             checked={formValues.toppings}
             />
