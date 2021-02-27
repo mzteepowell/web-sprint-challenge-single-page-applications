@@ -14,6 +14,7 @@ export default function Confirmation({details}) {
         <h1>
         Thanks for ordering. See you soon!
       </h1>
+      <h4> {!!details.toppings ? `Size: ${details.dropdown} Sauce: ${details.sauces}`: `Size: ${details.dropdown} Sauce:  ${details.sauces} Topping(s): ${details.toppings} ` }</h4>
       </div>
       <img
         className='home-image'

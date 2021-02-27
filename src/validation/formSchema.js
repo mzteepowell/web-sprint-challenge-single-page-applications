@@ -17,7 +17,7 @@ const formSchema = yup.object().shape({
     spinach: yup.boolean(),
     bacon: yup.boolean(),
     
-    text_area: yup.string().trim().min(100, 'Reached maximum characters allowed')//Not required
+    text_area: yup.string().trim().max(50, 'Reached maximum characters allowed')//Not required
 })
 
 export default formSchema;

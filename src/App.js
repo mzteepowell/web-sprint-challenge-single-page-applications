@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route, Link, Switch } from 'react-router-dom';
 import Home from './Home';
-import FormData from './FormData';
+import Form from './Form';
 import Confirmation from './Confirmation';
 import Footer from './Footer';
 import './App.css';
 
 
-const App = () => {
+const App = (props) => {
 
   return (
     <div className='App'>
@@ -23,13 +23,12 @@ const App = () => {
         <Confirmation />
       </Route>
       <Route exact path='/pizza'>
-        <FormData/>
+        <Form values />
       </Route>
       <Route exact path='/'>
         <Home/>
       </Route>
     </Switch>
-    
     <Footer/>
     </div>
   );

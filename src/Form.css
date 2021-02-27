@@ -25,6 +25,13 @@ h4 {
   color:#da3ca0; 
 }
 
+.text-area {
+  color: #3cda76;
+  font-weight: bold;
+}
+.text-area ::placeholder {
+  color: rgb(187, 184, 184);
+}
 pre {
   display: block;
   white-space: pre;

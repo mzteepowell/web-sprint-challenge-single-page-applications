@@ -1,6 +1,6 @@
 describe('Pizza Applcation', () => {
   beforeEach(()=> {
-    cy.visit('http://localhost:3002/pizza')
+    cy.visit('http://localhost:3000/pizza')
   })
   const form =() => cy.get('form')
   const errors = () => cy.get('.errors')
@@ -12,7 +12,7 @@ describe('Pizza Applcation', () => {
 
   it('form check', () => {
     form().should('exist')
-    errors().should('exist')
+    errors().should('not.exist')
     dropdown().should('exist')
     radio().should('exist')
     text_area().should('exist')
@@ -34,6 +34,11 @@ describe('Pizza Applcation', () => {
         dropdown().select('sm').should('have.value','sm')
         radio().check('original')
         submitButton().should('not.be.disabled')
+      })
+      it('Can submit data', () => {
+        dropdown().select('sm').should('have.value','sm')
+        radio().check('original')
+        submitButton().click(submitButton)
       })
   })   
 

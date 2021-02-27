@@ -97,6 +97,10 @@ img.home-mini-image {
   width: 200px;
   background-color: #08cea3;
 }
+.errors {
+  padding: 10px;
+  color: red;
+}
 
 .items-list-wrapper {
   margin-top: 36px;
