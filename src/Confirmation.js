@@ -3,9 +3,9 @@ import './App.css'
 import './Form.css'
 
 export default function Confirmation({details}) {
-  // if (!details) {
-  //   return <h3>No data returned...</h3>
-  // }
+  if (!details) {
+    return <h3>No data returned...</h3>
+  }
 
   return (
     <div className='item-wrapper'>

@@ -75,15 +75,16 @@ export default function Form(props){
   }
   useEffect(() => {
     formSchema.isValid(formValues).then(valid => setDisabled(!valid));
+    formSchema.isValid(formValues).then(valid => console.log(valid));
   }, [formValues])
-  console.log(formValues)
+  // console.log(formValues)
 
   const history = useHistory();
   
   const onSubmit = evt => {
     evt.preventDefault()
-     formSubmit()
-    history.push(`pizza/confirmation`)
+    formSubmit()
+    history.push(`${url}/confirmation`)
   }
 
   const onChange = evt => {
@@ -92,7 +93,6 @@ export default function Form(props){
     inputChange(name, valueToUse);
   }
 
-  console.log({url})
   return (
     <div className='item-wrapper'>
     
@@ -102,6 +102,7 @@ export default function Form(props){
         <div className='errors'>
             <div>{formErrors.dropdown}</div>
             <div>{formErrors.sauces}</div>
+            <div>{formErrors.text_area}</div>
         </div>
     
         </div>
@@ -179,6 +180,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='pepperoni'
+            value='pepperoni'
             onChange={onChange}
             checked={formValues.toppings}
             />
@@ -187,6 +189,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='sausage'
+            value='sausage'
             onChange={onChange}
             checked={formValues.toppings}
             />
@@ -195,6 +198,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='spicy_italian'
+            value='spicy_italian'
             onChange={onChange}
             checked={formValues.toppings}
             />
@@ -203,6 +207,7 @@ export default function Form(props){
             <input 
             type='checkbox'
             name='onions'
+            value='onions'
             onChange={onChange}
             checked={formValues.toppings}
             />

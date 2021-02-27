@@ -6,7 +6,7 @@ export default function Home() {
   const history = useHistory()
 
   const routeToShop = () => {
-    console.log(history);
+    // console.log(history);
     history.push('/pizza')
   }
 
