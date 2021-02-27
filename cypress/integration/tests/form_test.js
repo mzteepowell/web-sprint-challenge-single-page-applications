@@ -5,7 +5,7 @@ describe('Pizza Applcation', () => {
   const form =() => cy.get('form')
   const errors = () => cy.get('.errors')
   const dropdown = () => cy.get('select[name=dropdown]') 
-  const radio = () => cy.get('input[name=sauces]') 
+  const radio = () => cy.get('input[type=radio]') 
   const text_area = () => cy.get('input[name=text_area]') 
   const checkbox = () => cy.get('input[type=checkbox')
   const submitButton = () => cy.get('button')
@@ -29,8 +29,12 @@ describe('Pizza Applcation', () => {
     it('Check and Uncheck TOS checkbox', ()=> {
       checkbox().check(['pepperoni','sausage', 'onions', 'tomatoes', 'spicy_italian', 'spinach', 'bacon', 'mushrooms'])
       checkbox().uncheck(['pepperoni','sausage', 'onions', 'tomatoes', 'spicy_italian', 'spinach', 'bacon', 'mushrooms'])
-      
-    })
+      })
+      it('Are validations met to enable submit button?', () => {
+        dropdown().select('sm').should('have.value','sm')
+        radio().check('original')
+        submitButton().should('not.be.disabled')
+      })
   })   
 
 })
