@@ -39,14 +39,14 @@ pre {
 } 
 
 label {
-  display: flex;
-  flex-direction: column;
+  /* display: flex;
+  flex-direction: column; */
   align-items: center;
   letter-spacing: 2px;
  
 }
 input, select, .submit button{
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   height: 1.5rem;
@@ -96,16 +96,19 @@ button {
 .form-group h2{
   color: #ce0934;
 }
+.form-group h4 {
+  color: black; 
+}
 .form-group-radio {
   display: flex;
   justify-content: space-around;
 }
-.form-group-checkboxes {
-  display: flex;
-
+.form-group-checkbox {
+ display: flex;
+ flex-direction: wrap;
+ align-items: flex-end;
 }
-.form-group-checkbox-labels{
-  flex: 50%;
+.form-group-checkbox-labels{ 
   padding:10px;
 }
 .form p {

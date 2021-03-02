@@ -12,6 +12,8 @@ body,
 
 .App {
   text-align: center;
+  position: relative;
+  min-height: 155vh;
   height: 100%;
   width: 100%;
 }
@@ -286,7 +288,10 @@ img.home-mini-image {
 .md-button:disabled::after {
   opacity: 0;
 }
-footer{
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   background-color: #5f7e77;
   padding: 10px;
   color: white;
